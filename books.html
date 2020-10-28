@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Books</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+</head>
+<body>
+    <header>
+        <h1>Электронная библиотека</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a class="contrast" href="books.html">Книги</a></li>
+            <li><a class="link" href="visitors.html">Посетители</a></li>
+            <li><a class="link" href="cards.html">Карточки</a></li>
+            <li><a class="link" href="statistic.html">Статистика</a></li>
+        </ul>
+        <div class="form">
+            <p>
+
+                <button id="addBooks">Добавить книгу</button>
+            </p>
+            <p>
+                <select name="" id="sortBook">
+                    <option value="1">Название</option>
+                    <option value="2">Фамилия автора</option>
+                    <option value="3">Количество страниц</option>
+                </select>
+                <button id="sort">Сортировать</button>
+            </p>
+            <p>
+                <input type="text" id="search">
+                <button id="search_btn">Поиск</button>
+                <button id="reset_lib">Очистить библиотеку</button>
+            </p>
+        </div>
+    </nav>
+    <main>
+        <div class="head">
+            <h2>Приветствуем, <span id="guest"></span></h2>
+            <button id="loguot">Выход</button>
+        </div>
+        <div class="create_book hidden">
+            <div id="cross"></div>
+            <p>
+                <label for="id">ID книги</label>
+                <input required id="id" type="number" min="1">
+                <label for="bname">Название</label>
+                <input required id="bname" type="text">
+                <label for="aname">Автор</label>
+                <input required id="aname" type="text">
+                <label for="year">Год издания</label>
+                <input required id="year" type="number" min="1">
+                <label for="fname">Издательство</label>
+                <input required id="fname" type="text">
+                <label for="pages">Страниц</label>
+                <input required id="pages" type="number" min="1">
+                <label for="tcopies">Копий в наличии</label>
+                <input required id="tcopies" type="number">
+                <button id="create_book">Создать</button>
+            </p>
+        </div>
+        <div id="table" >
+            <table class="table-hover" >
+                <caption style="caption-side: top;">Список книг</caption>
+                <tr>
+                    <th>ID книги</th>
+                    <th>Название</th>
+                    <th>Автор</th>
+                    <th>Год выпуска</th>
+                    <th>Издательство</th>
+                    <th>Страниц</th>
+                    <th>Количество</th>
+                    <th>Редактировать/ <br>Удалить</th>
+                </tr>
+            </table>
+        </div>
+    </main>
+    <footer>
+        <h4>Copyright &copy; Prudnikoff - Kyiv, 2020</h4>
+    </footer>
+    <script src="https://code.jquery.com/jquery-latest.js"></script>
+    <script src="script.js" type="module"></script>
+    <script src="books.js" type="module"></script>
+</body>
+</html>

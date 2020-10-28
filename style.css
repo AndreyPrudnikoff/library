@@ -1,0 +1,258 @@
+:root{
+    --primary: gray;
+    --secondary: lightblue;
+    --large: 14pt Calibri;
+}
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font: var(--large);
+    color: var(--primary);
+}
+*, *:after, *:before{
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+header, main, footer{
+    text-align: center;
+}
+header{
+    position: fixed;
+    top: 0;
+    height: 15vh;
+    z-index: 9999;
+    background-color: var(--secondary);
+    width: 100%;
+    padding-top: 5vh
+}
+main{
+    text-align: center;
+    padding-top: 15vh;
+}
+footer{
+    position: absolute;
+    bottom: 0;
+    height: 12vh;
+    background-color: var(--secondary);
+    width: 100%;
+    padding-top: 6vh
+}
+nav{
+    position: fixed;
+    top: 0;
+    text-align: left;
+    height: 100vh;
+    width: 20%;
+    background-color: var(--primary);
+    padding-top: 10%;
+}
+li{
+    list-style-type: none;
+    margin-bottom: 20px;
+}
+.link{
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    font-size: 20px;
+    margin-left: 1.5em;
+    text-transform: uppercase;
+    position: relative;
+    filter: contrast(50%)
+}
+.contrast{
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    font-size: 20px;
+    margin-left: 1.5em;
+    text-transform: uppercase;
+    position: relative;
+    filter: contrast(100%);
+}
+
+a:hover,
+a:focus{
+    filter: contrast(100%);
+}
+
+p{
+    padding-left: 20px;
+}
+button, input, select{
+    margin-top: 20px;
+    padding: 5px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+button {
+    box-shadow: 2px 2px 5px #000;
+    border: none;
+    transition: transform .15s;
+    outline: none;
+    min-width: 100px;
+}
+button:hover{
+    transform: scale(1.1);
+}
+button:active{
+    transform: scale(1);
+}
+input:focus{
+    background-color: var(--secondary);
+}
+#login{
+    width: 100px;
+    margin-right: 80px;
+}
+#reset{
+    width: 100px;
+    margin-left: 80px;
+}
+.login_wrap{
+    color: var(--primary);
+    text-align: center;
+    width: 300px;
+}
+input:valid {
+    border-color: green;
+}
+
+input:invalid {
+    border-color: red;
+}
+main .head{
+    text-align: right;
+    margin-right: 10%;
+    padding-top: 7px;
+}
+#guest{
+    color: red;
+}
+#loguot{
+    margin-left: 30px;
+    margin-bottom: 0;
+}
+/*Таблица с книгами*/
+#table{
+    text-align: center;
+    padding-top: 10px;
+    margin-left: 25%;
+    overflow: scroll;
+    height: 65vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding-right: 200px;
+}
+caption{
+    text-transform: uppercase;
+    color: #000;
+    font-size: 16pt;
+    margin-bottom: 10px;
+}
+table{
+    border: 4px double var(--primary);
+    border-collapse: collapse;
+    width: 80%;
+}
+table#stat {
+    width: 25%;
+}
+td,th{
+    padding: 5px;
+    border: 1px solid var(--primary);
+    color: #000;
+}
+td{
+    text-align: center;
+    padding-left: 5px;
+}
+th{
+    background-color: lightgoldenrodyellow;
+}
+.hidden{
+    display: none;
+}
+.create_book{
+    height: 100vh;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    background-color: rgba(0, 0, 0, .6);
+}
+#cross{
+    background-image: url(img/chross.svg);
+    background-size: 30px 30px;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 110px;
+    left: 57%;
+    cursor: pointer;
+    transition: transform .3s;
+}
+#cross:hover{
+    transform: scale(1.3);
+}
+.create_book p{
+    background-color: rgba(255, 255, 255, .8);
+    padding: 50px;
+    margin: 100px auto;
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+    height: 75vh;
+    border-radius: 10px;
+    overflow: scroll;
+}
+.create_book p input{
+    margin: 5px 0 20px 0;
+}
+#reset_lib{
+    margin-top: 100px;
+    width: 200px;
+}
+td img{
+    cursor: pointer;
+}
+.delete{
+    margin-left: 20px;
+}
+img.edit,
+img.delete{
+    transition: transform .3s ease-in-out;
+}
+img.edit:hover,
+img.delete:hover{
+    transform: rotate(360deg);
+}
+.return {
+    transition: transform .2s;
+}
+.return:hover{
+    transform: scale(1.5);
+}
+.return:active {
+    transform: scale(1);
+}
+
+@media screen and (max-width: 1200px) {
+     body, .link, .contrast, caption {
+         font-size: 10px;
+     }
+     input {
+         width: 70px;
+     }
+     #table {
+        margin-left: 30%; 
+        padding-right: 20px;
+     }
+     table {
+         width: 400px;
+     }
+}

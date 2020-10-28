@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+</head>
+<body>
+    <header>
+        <h1>Электронная библиотека</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a class="link" href="books.html">Книги</a></li>
+            <li><a class="link" href="visitors.html">Посетители</a></li>
+            <li><a class="link" href="cards.html">Карточки</a></li>
+            <li><a class="contrast" href="statistic.html">Статистика</a></li>
+        </ul>
+    </nav>
+    <main>
+        <div class="head">
+            <h2>Приветствуем, <span id="guest"></span></h2>
+            <button id="loguot">Выход</button>
+        </div>
+        <div id="table">
+            <table id="stat" class="table-hover">
+                <caption style="caption-side: top;"><strong>ТОП-5 книг</strong></caption>
+                <tr>
+                    <th>Название книги</th>
+                    <th>Количество<br> карточек</th>
+                </tr>
+                <tbody id="t_book"></tbody>
+            </table>
+            <table id="stat" class="table-hover">
+                <caption style="caption-side: top;"><strong>ТОП-5 посетителей</strong></caption>
+                <tr>
+                    <th>Пользователь</th>
+                    <th>Активность <br> пользователя</th>
+                </tr>
+                <tbody id="t_vis"></tbody>
+            </table>
+        </div>
+    </main>
+    <footer>
+        <h4>Copyright &copy; Prudnikoff - Kyiv, 2020</h4>
+    </footer>
+    <script src="https://code.jquery.com/jquery-latest.js"></script>
+    <script src="script.js" type="module"></script>
+    <script src="statistic.js" type="module"></script>
+</body>
+</html>
